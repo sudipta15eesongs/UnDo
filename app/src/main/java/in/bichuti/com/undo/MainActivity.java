@@ -19,7 +19,9 @@ import android.widget.Toast;
 import java.io.BufferedReader;
 import java.io.File;
 import java.io.FileInputStream;
+import java.io.FileOutputStream;
 import java.io.InputStreamReader;
+import java.io.OutputStreamWriter;
 import java.util.ArrayList;
 import java.util.List;
 
@@ -70,6 +72,8 @@ public class MainActivity extends AppCompatActivity {
          @Override
          public void onClick(View v) {
              Intent activityChangeIntent = new Intent(MainActivity.this, GameOptions.class);
+             String newgame="999";
+             levelcomplete(newgame);
              startActivity(activityChangeIntent);
              deleteFile("UnDo.txt");
          }
@@ -136,7 +140,17 @@ public class MainActivity extends AppCompatActivity {
        //Theme decision
 
     }
+    public void levelcomplete(String lvlmsg){
 
+        try {
+            FileOutputStream fileout1 = openFileOutput("UnDoLevel.txt", MODE_PRIVATE);
+            OutputStreamWriter outputWriter1 = new OutputStreamWriter(fileout1);
+            outputWriter1.write(lvlmsg);
+            outputWriter1.close();
+        }catch (Exception e){
+            e.printStackTrace();
+        }
+    }
     @Override
     public boolean onCreateOptionsMenu(Menu menu) {
         // Inflate the menu; this adds items to the action bar if it is present.

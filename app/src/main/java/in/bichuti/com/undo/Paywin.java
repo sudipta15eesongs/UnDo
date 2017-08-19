@@ -81,7 +81,7 @@ public class Paywin extends AppCompatActivity {
         }
 
 
-         if(gamety.equals("Normal")&& ggcount==5){
+         if(gamety.equals("Normal")&& ggcount==1){
             if( pay2num>pay1num){
                 T1.setText("Congratulations!!!");
                 T2.setText("Level Completed!!");
@@ -89,6 +89,8 @@ public class Paywin extends AppCompatActivity {
                 T2.setTextColor(Color.parseColor("#00FFFF"));
 
                 V1.setImageDrawable(D2);
+                String lvmsg="1";
+                levelcomplete(lvmsg);
             }else{
                 T1.setText("OOPS!!!");
                 T2.setText("You have lost this game");
@@ -107,7 +109,7 @@ public class Paywin extends AppCompatActivity {
                     finish();
                 }
             });
-        }else if(gamety.equals("Time")&& ggcount==5){
+        }else if(gamety.equals("Time")&& ggcount==1){
 
             if( pay2num>pay1num){
                 T1.setText("Congratulations!!!");
@@ -115,6 +117,8 @@ public class Paywin extends AppCompatActivity {
                 T2.setTextSize(30);
                 T2.setTextColor(Color.parseColor("#00FFFF"));
                 V1.setImageDrawable(D2);
+                String lvmsg="12";
+                levelcomplete(lvmsg);
             }else{
                 T1.setText("OOPS!!!");
                 T2.setText("You have lost this game");
@@ -130,13 +134,15 @@ public class Paywin extends AppCompatActivity {
                     finish();
                 }
             });
-        }else if(gamety.equals("Final")&& ggcount==5){
+        }else if(gamety.equals("Final")&& ggcount==1){
             if( pay2num>pay1num){
                 T1.setText("Congratulations!!!");
                 T2.setText("Level Completed!!");
                 T2.setTextSize(30);
                 T2.setTextColor(Color.parseColor("#00FFFF"));
                 V1.setImageDrawable(D2);
+                String lvmsg="123";
+                levelcomplete(lvmsg);
             }else{
                 T1.setText("OOPS!!!");
                 T2.setText("You have lost this game");
@@ -191,6 +197,8 @@ public class Paywin extends AppCompatActivity {
             @Override
             public void onClick(View v) {
                 Intent it1=new Intent(Paywin.this,GameOptions.class);
+                String newgame="999";
+                levelcomplete(newgame);
                 startActivity(it1);
                 finish();
             }
@@ -198,6 +206,17 @@ public class Paywin extends AppCompatActivity {
 
 
 
+    }
+    public void levelcomplete(String lvlmsg){
+
+        try {
+            FileOutputStream fileout1 = openFileOutput("UnDoLevel.txt", MODE_PRIVATE);
+            OutputStreamWriter outputWriter1 = new OutputStreamWriter(fileout1);
+            outputWriter1.write(lvlmsg);
+            outputWriter1.close();
+        }catch (Exception e){
+            e.printStackTrace();
+        }
     }
     private String getColoredSpanned(String text, String color) {
         String input = "<font color=" + color + ">" + text + "</font>";

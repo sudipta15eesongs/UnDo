@@ -18,10 +18,12 @@ import android.widget.TextView;
 
 import java.util.ArrayList;
 import java.util.List;
-
+import android.widget.Toast;
 public class GameOptions extends AppCompatActivity {
-
-    Button B1,B2,B3;
+    String lstatus;
+    ImageView v1,v2,v3;
+    Drawable L1,L2;
+    Button  B1,B2,B3;
     List<String> readtheme=new ArrayList<String>();
     RelativeLayout RL_O;
     @Override
@@ -32,7 +34,28 @@ public class GameOptions extends AppCompatActivity {
         B1=(Button)findViewById(R.id.button);
         B2=(Button)findViewById(R.id.button2);
         B3=(Button)findViewById(R.id.button3);
+        v1=(ImageView)findViewById(R.id.IM1);
+        v2=(ImageView)findViewById(R.id.IM2);
+        v3=(ImageView)findViewById(R.id.IM3);
+         L1=ContextCompat.getDrawable(this,R.drawable.complete);
+        L2=ContextCompat.getDrawable(this,R.drawable.complete);
+        levelstatus();
+        // levelstatus();
+        if (lstatus.equals("1")){
+            v1.setImageDrawable(L1);
+        }else if (lstatus.equals("12")){
+            v1.setImageDrawable(L1);
+            v2.setImageDrawable(L1);
+        }else if (lstatus.equals("123")){
+            v1.setImageDrawable(L1);
+            v2.setImageDrawable(L1);
+            v3.setImageDrawable(L1);
 
+        }else {
+            v1.setImageDrawable(null);
+            v2.setImageDrawable(null);
+           v3.setImageDrawable(null);
+        }
      B1.setOnClickListener(new touchoption1());
         B2.setOnClickListener(new touchoption2());
         B3.setOnClickListener(new touchoption3());
@@ -57,8 +80,13 @@ public class GameOptions extends AppCompatActivity {
             }
         }
 
-
     }
+    public void levelstatus(){
+        List<String> readtheme=new ArrayList<String>();
+        readtheme=FileRW.fileread("UnDoLevel.txt",this.getBaseContext());
+        lstatus=readtheme.get(0);
+    };
+
 
     public class touchoption1 implements View.OnClickListener {
 
@@ -77,26 +105,37 @@ public class GameOptions extends AppCompatActivity {
 
         @Override
         public void onClick(View v) {
+            if (lstatus.equals("1")||lstatus.equals("12")||lstatus.equals("123")){
             Intent activityChangeIntent = new Intent(GameOptions.this, GameActivity.class);
             activityChangeIntent.putExtra("Gametype","Time");
             activityChangeIntent.putExtra("comwincount",0);
             activityChangeIntent.putExtra("uwincount",0);
             activityChangeIntent.putExtra("globalcount",0);
 
-            startActivity(activityChangeIntent);
+            startActivity(activityChangeIntent);}
+            else{
+                Toast.makeText(getApplicationContext(), "Previous level is Incomplete",
+                        Toast.LENGTH_LONG).show();
+            }
         }
     }
     public class touchoption3 implements View.OnClickListener {
 
         @Override
         public void onClick(View v) {
+            if((lstatus.equals("12")||lstatus.equals("123"))){
             Intent activityChangeIntent = new Intent(GameOptions.this, GameActivity.class);
             activityChangeIntent.putExtra("Gametype","Final");
             activityChangeIntent.putExtra("comwincount",0);
             activityChangeIntent.putExtra("uwincount",0);
             activityChangeIntent.putExtra("globalcount",0);
 
-            startActivity(activityChangeIntent);
+            startActivity(activityChangeIntent);}
+            else{
+
+                Toast.makeText(getApplicationContext(), "Previous level is Incomplete",
+                        Toast.LENGTH_LONG).show();
+            }
         }
     }
     private String getColoredSpanned(String text, String color) {
