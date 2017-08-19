@@ -1,0 +1,82 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/R1"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@drawable/fl1"
+    app:layout_behavior="@string/appbar_scrolling_view_behavior"
+    tools:context="in.bichuti.com.undo.MainActivity"
+    tools:layout_editor_absoluteX="0dp"
+    tools:layout_editor_absoluteY="89dp"
+    tools:showIn="@layout/activity_main">
+
+
+    <Button
+
+        android:id="@+id/NewGame"
+        android:layout_width="150dp"
+        android:layout_height="wrap_content"
+        android:layout_alignParentTop="true"
+        android:layout_centerHorizontal="true"
+        android:layout_gravity="center_horizontal|center"
+        android:layout_marginTop="113dp"
+        android:background="@drawable/buttonshape"
+        android:gravity="center"
+
+        android:text="New Game"
+        android:textColor="@android:color/background_light"
+        android:textIsSelectable="false"
+        android:textStyle="bold" />
+
+    <Button
+        android:id="@+id/Resume"
+        style="@android:style/Widget.Holo.Button"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignEnd="@+id/NewGame"
+        android:layout_alignStart="@+id/NewGame"
+        android:layout_below="@+id/NewGame"
+        android:layout_gravity="center_horizontal|center"
+        android:layout_marginTop="30dp"
+        android:background="@drawable/buttonshape"
+        android:gravity="center"
+        android:text="Resume"
+        android:textIsSelectable="false"
+        android:textStyle="bold" />
+
+    <Button
+        android:id="@+id/Continue"
+        style="@android:style/Widget.Holo.Button"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignEnd="@+id/NewGame"
+        android:layout_alignStart="@+id/NewGame"
+        android:layout_below="@+id/Resume"
+        android:layout_gravity="center_horizontal|center"
+        android:layout_marginTop="30dp"
+        android:background="@drawable/buttonshape"
+        android:gravity="center"
+        android:text="Continue"
+        android:textIsSelectable="false"
+        android:textStyle="bold" />
+
+    <Button
+        android:id="@+id/Settings"
+        style="@android:style/Widget.Holo.Button"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignEnd="@+id/Continue"
+        android:layout_alignStart="@+id/Continue"
+        android:layout_below="@+id/Continue"
+        android:layout_gravity="center_horizontal|center"
+        android:layout_marginTop="32dp"
+        android:background="@drawable/buttonshape"
+        android:gravity="center"
+        android:text="Settings"
+        android:textAllCaps="false"
+        android:textIsSelectable="false"
+        android:textStyle="bold" />
+
+</RelativeLayout>

@@ -1,0 +1,183 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@android:color/darker_gray"
+    android:orientation="vertical">
+
+    <LinearLayout
+        android:id="@+id/linearLayout4"
+        android:layout_width="100dp"
+        android:layout_height="match_parent"
+        android:layout_above="@+id/linearLayout5"
+        android:background="@color/colorPrimary"
+        android:orientation="vertical"
+        android:weightSum="1">
+
+        <RadioGroup
+            android:layout_width="match_parent"
+            android:layout_height="match_parent">
+
+            <RadioButton
+                android:id="@+id/RB1"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center_horizontal"
+                android:paddingTop="100dp" />
+
+            <RadioButton
+                android:id="@+id/RB2"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center_horizontal"
+                android:layout_marginTop="50dp" />
+
+            <RadioButton
+                android:id="@+id/RB3"
+                android:layout_width="wrap_content"
+                android:layout_height="match_parent"
+                android:layout_gravity="center_horizontal"
+                android:gravity="center"
+                android:paddingTop="20dp" />
+        </RadioGroup>
+    </LinearLayout>
+
+    <LinearLayout
+        android:id="@+id/linearLayout"
+        android:layout_width="match_parent"
+        android:layout_height="120dp"
+        android:layout_alignParentTop="true"
+        android:layout_toEndOf="@+id/linearLayout4"
+        android:background="@color/colorPrimary"
+        android:orientation="horizontal"
+        android:weightSum="1">
+
+        <ImageView
+            android:id="@+id/imageView4"
+            android:layout_width="151dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="0.14"
+            app:srcCompat="@drawable/dp1" />
+
+        <de.hdodenhof.circleimageview.CircleImageView
+            android:id="@+id/im1"
+            android:layout_width="40dp"
+            android:layout_height="40dp"
+            android:layout_alignParentStart="true"
+            android:layout_gravity="center_vertical"
+            android:layout_weight="0.38"
+            android:src="@drawable/ball1"
+            app:civ_border_color="#000000"
+            app:srcCompat="@drawable/ball1" />
+
+        <de.hdodenhof.circleimageview.CircleImageView
+            android:id="@+id/Im2"
+            android:layout_width="40dp"
+            android:layout_height="40dp"
+            android:layout_alignParentStart="true"
+            android:layout_gravity="center_vertical"
+            android:layout_weight="0.45"
+            android:src="@drawable/ball2"
+            app:civ_border_color="#000000"
+            app:srcCompat="@drawable/ball2" />
+    </LinearLayout>
+
+    <LinearLayout
+        android:id="@+id/linearLayout3"
+        android:layout_width="match_parent"
+        android:layout_height="120dp"
+        android:layout_below="@+id/linearLayout"
+        android:layout_toEndOf="@+id/linearLayout4"
+        android:background="@color/colorPrimary"
+        android:orientation="horizontal">
+
+        <ImageView
+            android:id="@+id/imageView5"
+            android:layout_width="151dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="0.39"
+            app:srcCompat="@drawable/flback" />
+
+        <de.hdodenhof.circleimageview.CircleImageView
+            android:id="@+id/im3"
+            android:layout_width="40dp"
+            android:layout_height="40dp"
+            android:layout_alignParentStart="true"
+            android:layout_gravity="center_vertical"
+            android:layout_weight="1"
+            android:src="@drawable/fl1"
+            app:civ_border_color="#000000"
+            app:srcCompat="@drawable/fl1" />
+
+        <de.hdodenhof.circleimageview.CircleImageView
+            android:id="@+id/im4"
+            android:layout_width="40dp"
+            android:layout_height="40dp"
+            android:layout_alignParentStart="true"
+            android:layout_gravity="center_vertical"
+            android:layout_weight="1"
+            android:src="@drawable/fl2"
+            app:civ_border_color="#000000" />
+    </LinearLayout>
+
+    <LinearLayout
+        android:id="@+id/linearLayout2"
+        android:layout_width="match_parent"
+        android:layout_height="120dp"
+        android:layout_below="@+id/linearLayout3"
+        android:layout_toEndOf="@+id/linearLayout4"
+        android:background="@color/colorPrimary"
+        android:orientation="horizontal">
+
+        <ImageView
+            android:id="@+id/imageView7"
+            android:layout_width="151dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="0.39"
+            app:srcCompat="@drawable/game2" />
+
+        <de.hdodenhof.circleimageview.CircleImageView
+            android:id="@+id/im6"
+            android:layout_width="40dp"
+            android:layout_height="40dp"
+            android:layout_alignParentStart="true"
+            android:layout_gravity="center_vertical"
+            android:layout_weight="1"
+            android:src="@drawable/fl1"
+            app:civ_border_color="#000000"
+            app:srcCompat="@drawable/fl1" />
+
+        <de.hdodenhof.circleimageview.CircleImageView
+            android:id="@+id/im5"
+            android:layout_width="40dp"
+            android:layout_height="40dp"
+            android:layout_alignParentStart="true"
+            android:layout_gravity="center_vertical"
+            android:layout_weight="1"
+            android:src="@drawable/fl2"
+            app:srcCompat="@drawable/fl2" />
+    </LinearLayout>
+
+    <LinearLayout
+        android:id="@+id/linearLayout5"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_alignParentBottom="true"
+        android:layout_alignParentEnd="true"
+        android:layout_alignParentStart="true"
+        android:layout_below="@+id/linearLayout2"
+        android:paddingLeft="120dp"
+        android:weightSum="1">
+
+        <Button
+            android:id="@+id/ThemeBack"
+            android:layout_width="80dp"
+            android:layout_height="50dp"
+            android:layout_gravity="center"
+            android:layout_weight="0.13"
+            android:background="@drawable/buttonshape1"
+            android:text="Back" />
+    </LinearLayout>
+
+</RelativeLayout>

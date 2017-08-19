@@ -1,0 +1,212 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/R1"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:elevation="2dp"
+    android:orientation="vertical">
+
+    <LinearLayout
+        android:id="@+id/L1"
+        android:layout_width="match_parent"
+        android:layout_height="60dp"
+        android:layout_alignParentStart="true"
+        android:layout_alignParentTop="true"
+        android:background="#303030"
+        android:foregroundGravity="right"
+        android:orientation="horizontal"
+        android:weightSum="1">
+
+
+        <de.hdodenhof.circleimageview.CircleImageView
+            android:id="@+id/Dip1"
+            android:layout_width="50dp"
+            android:layout_height="50dp"
+            android:layout_marginRight="@dimen/fab_margin"
+            android:src="@drawable/ball1"
+            app:civ_border_color="#000000"
+            app:civ_border_width="2dp" />
+
+        <TextView
+            android:id="@+id/textView1"
+            android:layout_width="137dp"
+            android:layout_height="60dp"
+            android:cursorVisible="false"
+            android:gravity="fill_horizontal|center"
+            android:text="player"
+            android:textColor="#ffffff"
+            android:textSize="20dp" />
+
+    </LinearLayout>
+
+
+    <RelativeLayout
+        android:id="@+id/RL2"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_above="@+id/L2"
+        android:layout_below="@+id/L1"
+        android:background="@drawable/game2">
+
+        <de.hdodenhof.circleimageview.CircleImageView
+            android:id="@+id/v2"
+            android:layout_width="50dp"
+            android:layout_height="50dp"
+            android:src="@drawable/ball1"
+            app:civ_border_color="#000000"
+
+            android:layout_alignParentTop="true"
+            android:layout_alignStart="@+id/v5" />
+
+        <de.hdodenhof.circleimageview.CircleImageView
+            android:id="@+id/v6"
+            android:layout_width="50dp"
+            android:layout_height="50dp"
+            android:layout_alignParentRight="true"
+            android:layout_centerVertical="true"
+            android:src="@drawable/ball3"
+            app:civ_border_color="#000000"
+             />
+
+        <de.hdodenhof.circleimageview.CircleImageView
+            android:id="@+id/v3"
+            android:layout_width="50dp"
+            android:layout_height="50dp"
+            android:layout_alignParentRight="true"
+            android:layout_alignParentTop="true"
+            android:src="@drawable/ball1"
+            app:civ_border_color="#000000"
+             />
+
+        <de.hdodenhof.circleimageview.CircleImageView
+            android:id="@+id/v4"
+            android:layout_width="50dp"
+            android:layout_height="50dp"
+            android:layout_alignParentLeft="true"
+            android:layout_centerVertical="true"
+            android:src="@drawable/ball3"
+            app:civ_border_color="#000000"
+             />
+
+        <de.hdodenhof.circleimageview.CircleImageView
+            android:id="@+id/v1"
+            android:layout_width="50dp"
+            android:layout_height="50dp"
+            android:layout_alignParentStart="true"
+            android:src="@drawable/ball1"
+            app:civ_border_color="#000000"
+             />
+
+        <de.hdodenhof.circleimageview.CircleImageView
+            android:id="@+id/v7"
+            android:layout_width="50dp"
+            android:layout_height="50dp"
+            android:layout_alignParentBottom="true"
+            android:layout_alignParentLeft="true"
+            android:src="@drawable/ball2"
+            app:civ_border_color="#000000"
+             />
+
+        <de.hdodenhof.circleimageview.CircleImageView
+            android:id="@+id/v5"
+            android:layout_width="50dp"
+            android:layout_height="50dp"
+            android:layout_centerHorizontal="true"
+            android:layout_centerVertical="true"
+            android:src="@drawable/ball3"
+            app:civ_border_color="#000000"
+             />
+
+        <de.hdodenhof.circleimageview.CircleImageView
+            android:id="@+id/v8"
+            android:layout_width="50dp"
+            android:layout_height="50dp"
+            android:layout_alignParentBottom="true"
+            android:layout_centerHorizontal="true"
+            android:src="@drawable/ball2"
+            app:civ_border_color="#000000"
+             />
+
+        <de.hdodenhof.circleimageview.CircleImageView
+            android:id="@+id/v9"
+            android:layout_width="50dp"
+            android:layout_height="50dp"
+            android:layout_alignParentBottom="true"
+            android:layout_alignParentRight="true"
+            android:src="@drawable/ball2"
+            app:civ_border_color="#000000"
+             />
+
+    </RelativeLayout>
+
+    <LinearLayout
+        android:id="@+id/L2"
+        android:layout_width="match_parent"
+        android:layout_height="60dp"
+        android:background="#303030"
+        android:orientation="horizontal"
+        android:weightSum="1"
+        android:layout_alignParentBottom="true"
+        android:layout_alignParentStart="true">
+
+        <Button
+            android:id="@+id/Pause"
+            android:layout_width="100dp"
+            android:layout_height="30dp"
+            android:layout_gravity="center_vertical"
+            android:background="@drawable/buttonshape"
+            android:elevation="1dp"
+            android:text="Pause"
+            android:textColor="#FFFFFF" />
+
+        <de.hdodenhof.circleimageview.CircleImageView
+            android:id="@+id/Scorered"
+            android:layout_width="40dp"
+            android:layout_height="40dp"
+            android:layout_alignParentStart="true"
+            android:layout_gravity="center_vertical"
+            android:src="@drawable/ball1"
+            app:civ_border_color="#000000" />
+
+        <TextView
+            android:id="@+id/ScoreText"
+            android:layout_width="20dp"
+            android:layout_height="match_parent"
+            android:layout_gravity="center"
+            android:layout_weight="0.47"
+            android:gravity="center"
+            android:text="TextView"
+            android:textColor="#FFFFFF"
+            android:textSize="24dp"
+            android:textStyle="bold" />
+
+        <de.hdodenhof.circleimageview.CircleImageView
+            android:id="@+id/Scoreblue"
+            android:layout_width="40dp"
+            android:layout_height="40dp"
+            android:layout_alignParentRight="true"
+            android:layout_gravity="center_vertical"
+            android:src="@drawable/ball2"
+            app:civ_border_color="#000000"
+             />
+
+    </LinearLayout>
+
+    <TextView
+        android:id="@+id/textView2"
+        android:layout_width="180dp"
+        android:layout_height="60dp"
+        android:layout_alignParentStart="false"
+        android:layout_alignParentTop="true"
+        android:layout_marginStart="299dp"
+        android:cursorVisible="false"
+        android:gravity="fill_horizontal|center"
+        android:text="time"
+        android:textColor="@android:color/holo_orange_dark"
+        android:textSize="20dp"
+        android:textStyle="bold" />
+
+</RelativeLayout>
+
