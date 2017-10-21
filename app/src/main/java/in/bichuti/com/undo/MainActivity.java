@@ -39,7 +39,7 @@ public class MainActivity extends AppCompatActivity {
      Button b1 = (Button)findViewById(R.id.NewGame);
         Button b3 = (Button)findViewById(R.id.Continue);
         Button b4 = (Button)findViewById(R.id.Settings);
-
+        Button b5 = (Button)findViewById(R.id.How);
         readtheme=FileRW.fileread("Undotheme.txt",this.getBaseContext());
         String themevalue=readtheme.get(0);
         //System.out.println("cool");
@@ -59,7 +59,13 @@ public class MainActivity extends AppCompatActivity {
 
             }
         }
-
+        b5.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                Intent activityChangeIntent = new Intent(MainActivity.this, How2play.class);
+                startActivity(activityChangeIntent);
+            }
+        });
         b4.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
@@ -118,7 +124,8 @@ public class MainActivity extends AppCompatActivity {
                         }
                         Finalline=sb.toString();
                     }catch (Exception e){};
-
+                    //System.out.println("coolsud");
+                 //System.out.println(Finalline);
                     String [] dtr=Finalline.split(",");
                     String gametype=dtr[0];
                     int comcount=Integer.valueOf(dtr[1]);

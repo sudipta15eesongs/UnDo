@@ -5,7 +5,7 @@
     android:id="@+id/R1"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:background="@drawable/fl1"
+    android:background="@drawable/dp1"
     app:layout_behavior="@string/appbar_scrolling_view_behavior"
     tools:context="in.bichuti.com.undo.MainActivity"
     tools:layout_editor_absoluteX="0dp"
@@ -18,17 +18,17 @@
         android:id="@+id/NewGame"
         android:layout_width="150dp"
         android:layout_height="wrap_content"
-        android:layout_alignParentTop="true"
-        android:layout_centerHorizontal="true"
         android:layout_gravity="center_horizontal|center"
-        android:layout_marginTop="113dp"
+        android:layout_marginTop="86dp"
         android:background="@drawable/buttonshape"
         android:gravity="center"
 
         android:text="New Game"
         android:textColor="@android:color/background_light"
         android:textIsSelectable="false"
-        android:textStyle="bold" />
+        android:textStyle="bold"
+        android:layout_alignParentTop="true"
+        android:layout_centerHorizontal="true" />
 
     <Button
         android:id="@+id/Resume"
@@ -74,9 +74,25 @@
         android:layout_marginTop="32dp"
         android:background="@drawable/buttonshape"
         android:gravity="center"
-        android:text="Settings"
+        android:text="Theme"
         android:textAllCaps="false"
         android:textIsSelectable="false"
         android:textStyle="bold" />
+    <Button
+        android:id="@+id/How"
+        style="@android:style/Widget.Holo.Button"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center_horizontal|center"
+        android:layout_marginTop="27dp"
+        android:background="@drawable/buttonshape"
+        android:gravity="center"
+        android:text="How to Play"
+        android:textAllCaps="false"
+        android:textIsSelectable="false"
+        android:textStyle="bold"
+        android:layout_below="@+id/Settings"
+        android:layout_alignStart="@+id/Settings"
+        android:layout_alignEnd="@+id/Settings" />
 
 </RelativeLayout>

@@ -146,7 +146,7 @@ public class GameActivity extends AppCompatActivity {
             //System.out.println(gcount);
             if (gametype.equals("Time")){
                 if(gcount>0){
-                    tlps=new Timelaps(maintimecount-(30000)-(gcount*5*1000));
+                    tlps=new Timelaps(maintimecount-(35000)-(gcount*5*1000));
                 }else {tlps=new Timelaps(maintimecount-30000);}
 
             }else if(gametype.equals("Final")){
@@ -620,7 +620,7 @@ public void makecomready(){
 
                      makecomready();
                      if(win==1) {
-                         Timelaps2 td = new Timelaps2(3000);
+                         Timelaps2 td = new Timelaps2(2000);
                      }
 
                  }

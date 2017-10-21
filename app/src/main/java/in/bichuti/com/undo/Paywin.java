@@ -71,8 +71,9 @@ public class Paywin extends AppCompatActivity {
         }
         String txtmsg=gamety+","+String.valueOf(pay1num)+","+String.valueOf(pay2num)+","+
                 String.valueOf(ggcount);
+        //System.out.println(txtmsg);
         try {
-            FileOutputStream fileout = openFileOutput("UnDo.txt", MODE_PRIVATE);
+            FileOutputStream fileout = getBaseContext().openFileOutput("UnDo.txt", MODE_PRIVATE);
             OutputStreamWriter outputWriter = new OutputStreamWriter(fileout);
             outputWriter.write(txtmsg);
             outputWriter.close();
@@ -81,7 +82,7 @@ public class Paywin extends AppCompatActivity {
         }
 
 
-         if(gamety.equals("Normal")&& ggcount==1){
+         if(gamety.equals("Normal")&& ggcount==5){
             if( pay2num>pay1num){
                 T1.setText("Congratulations!!!");
                 T2.setText("Level Completed!!");
@@ -109,7 +110,7 @@ public class Paywin extends AppCompatActivity {
                     finish();
                 }
             });
-        }else if(gamety.equals("Time")&& ggcount==1){
+        }else if(gamety.equals("Time")&& ggcount==5){
 
             if( pay2num>pay1num){
                 T1.setText("Congratulations!!!");
@@ -134,7 +135,7 @@ public class Paywin extends AppCompatActivity {
                     finish();
                 }
             });
-        }else if(gamety.equals("Final")&& ggcount==1){
+        }else if(gamety.equals("Final")&& ggcount==3){
             if( pay2num>pay1num){
                 T1.setText("Congratulations!!!");
                 T2.setText("Level Completed!!");
